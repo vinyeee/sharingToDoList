@@ -1,0 +1,124 @@
+:root { 
+  --asphalt: #150808;
+  --black: #000000;
+  --black-2: #00000099;
+  --eerie-black: #1c1b1a;
+  --log-cabin: #232323;
+  --shady-lady: #aaaaaa;
+  --textwhite-default: #ffffff;
+ 
+  --font-size-l: 28px;
+  --font-size-m: 20px;
+  --font-size-s: 16px;
+  --font-size-xs: 15px;
+  --font-size-xxs: 14px;
+  --font-size-xxxs: 12px;
+  --font-size-xxxxs: 10px;
+ 
+  --font-family-jejugothic-regular: "JejuGothic-Regular", Helvetica;
+  --font-family-jim_nightshade: "Jim Nightshade", Helvetica;
+  --font-family-noto_sans_kr: "Noto Sans KR", Helvetica;
+}
+.notosanskr-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-normal-black-15px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-bold-black-15px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-normal-shady-lady-15px {
+  color: var(--shady-lady);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-normal-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-bold-black-28px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-bold-eerie-black-28px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-normal-white-20px {
+  color: var(--textwhite-default);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-bold-white-16px {
+  color: var(--textwhite-default);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.jejugothic-regular-normal-black-20px {
+  color: var(--black-2);
+  font-family: var(--font-family-jejugothic-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-normal-shady-lady-16px {
+  color: var(--shady-lady);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jejugothic-regular-normal-black-20px-2 {
+  color: var(--black);
+  font-family: var(--font-family-jejugothic-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}

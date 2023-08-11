@@ -1,0 +1,281 @@
+/* screen - makechallenge */
+
+.makechallenge {
+  align-items: flex-start;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  height: 881px;
+  padding: 64px 0;
+  width: 387px;
+}
+
+.makechallenge .frame-36 {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+.makechallenge .group-39 {
+  height: 75px;
+  position: relative;
+  width: 301px;
+}
+
+.makechallenge .text-53 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 208px;
+}
+
+.makechallenge .text-54 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 53px;
+  white-space: nowrap;
+  width: 297px;
+}
+
+.makechallenge .group-38 {
+  height: 450px;
+  position: relative;
+  width: 330.23px;
+}
+
+.makechallenge .group-87 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 330px;
+}
+
+.makechallenge .overlap-group4 {
+  height: 450px;
+  position: relative;
+  width: 330px;
+}
+
+.makechallenge .rectangle-95 {
+  height: 450px;
+  left: 11px;
+  position: absolute;
+  top: 0;
+  width: 319px;
+}
+
+.makechallenge .group-37 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 356px;
+  position: absolute;
+  top: 52px;
+  width: 322px;
+}
+
+.makechallenge .text-55 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-right: 70.0px;
+  min-height: 22px;
+  text-align: center;
+  width: 177px;
+}
+
+.makechallenge .overlap-group {
+  background-image: url(../img/rectangle-96.svg);
+  background-size: 100% 100%;
+  height: 43px;
+  margin-left: 22.0px;
+  margin-top: 5px;
+  position: relative;
+  width: 268px;
+}
+
+.makechallenge .x {
+  color: #949292;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.makechallenge .rectangle-72 {
+  height: 29px;
+  left: 23px;
+  position: absolute;
+  top: 6px;
+  width: 79px;
+}
+
+.makechallenge .text-56 {
+  align-self: flex-start;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 38px;
+  margin-top: 26px;
+  min-height: 22px;
+  width: 124px;
+}
+
+.makechallenge .overlap-group2 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-96.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 43px;
+  margin-left: 22.0px;
+  margin-top: 5px;
+  min-width: 268px;
+  padding: 13px 0;
+}
+
+.makechallenge .ex {
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  width: 183px;
+}
+
+.makechallenge .text-57 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-right: 62.77px;
+  margin-top: 24px;
+  min-height: 22px;
+  width: 183px;
+}
+
+.makechallenge .overlap-group3 {
+  height: 43px;
+  margin-top: 10px;
+  position: relative;
+  width: 290px;
+}
+
+.makechallenge .rectangle-98 {
+  height: 43px;
+  left: 22px;
+  position: absolute;
+  top: 0;
+  width: 268px;
+}
+
+.makechallenge .text-58 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  white-space: nowrap;
+  width: 183px;
+}
+
+.makechallenge .text-60 {
+  align-self: flex-start;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 46px;
+  margin-top: 18px;
+  min-height: 22px;
+  text-align: center;
+  width: 92px;
+}
+
+.makechallenge .overlap-group1 {
+  align-self: flex-start;
+  height: 43px;
+  margin-top: 8px;
+  position: relative;
+  width: 306px;
+}
+
+.makechallenge .rectangle-99 {
+  height: 43px;
+  left: 38px;
+  position: absolute;
+  top: 0;
+  width: 268px;
+}
+
+.makechallenge .text-59 {
+  color: #786e6e;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  white-space: nowrap;
+  width: 183px;
+}
+
+.makechallenge .polygon-1 {
+  height: 10px;
+  left: 268px;
+  position: absolute;
+  top: 18px;
+  width: 13px;
+}
+
+.makechallenge .text-61 {
+  color: #878181;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  height: 40px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: relative;
+  text-align: center;
+  width: 376px;
+}
+
+.makechallenge .group-36 {
+  cursor: pointer;
+  height: 55px;
+  position: relative;
+  width: 190px;
+}
+
+.makechallenge .overlap-group5 {
+  align-items: center;
+  background-color: var(--asphalt);
+  border-radius: 3px;
+  display: flex;
+  height: 55px;
+  justify-content: flex-end;
+  min-width: 188px;
+  padding: 0 27px;
+}
+
+.makechallenge .text-62 {
+  letter-spacing: 0;
+  line-height: 20px;
+  min-height: 23px;
+  text-align: center;
+  white-space: nowrap;
+  width: 131px;
+}

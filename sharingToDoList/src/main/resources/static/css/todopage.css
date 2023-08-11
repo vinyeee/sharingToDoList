@@ -1,0 +1,468 @@
+/* screen - todopage */
+
+.todopage {
+  align-items: flex-end;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 863px;
+  overflow: hidden;
+  padding: 23px 0;
+  width: 383px;
+}
+
+.todopage .vector-1 {
+  align-self: flex-start;
+  cursor: pointer;
+  height: 18px;
+  margin-left: 17.9px;
+  width: 19px;
+}
+
+.todopage .frame-41 {
+  align-items: center;
+  align-self: center;
+  background-color: #d9d9d95e;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.47px;
+  margin-top: 60px;
+  min-height: 117px;
+  padding: 10.5px 44px;
+  width: 348px;
+}
+
+.todopage .text-64 {
+  align-self: flex-start;
+  color: #ff0d47;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  height: 23px;
+  letter-spacing: 0;
+  line-height: 26.0px;
+  text-align: center;
+  white-space: nowrap;
+  width: 256px;
+}
+
+.todopage .text-63 {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  height: 33px;
+  letter-spacing: 0;
+  line-height: 26.0px;
+  margin-right: 24.47px;
+  margin-top: 8px;
+  text-align: center;
+  width: 166px;
+}
+
+.todopage .text-65 {
+  color: #150b01;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-right: 12.47px;
+  min-height: 29px;
+  text-align: center;
+  width: 170px;
+}
+
+.todopage .group-80 {
+  align-items: flex-end;
+  display: flex;
+  height: 199px;
+  justify-content: flex-end;
+  margin-right: -76.59px;
+  margin-top: 48px;
+  min-width: 441px;
+}
+
+.todopage .group-1 {
+  align-self: flex-start;
+  height: 34px;
+  margin-top: -0.05px;
+  width: 31px;
+}
+
+.todopage .group-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-left: 30px;
+  min-height: 199px;
+  width: 319px;
+}
+
+.todopage .overlap-group4 {
+  align-items: flex-start;
+  background-color: #72adf3;
+  border-radius: 3px;
+  display: flex;
+  height: 30px;
+  margin-left: 0;
+  min-width: 233px;
+  padding: 4.2px 59.9px;
+}
+
+.todopage .text-70 {
+  color: #fffcfc;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxs);
+  font-weight: 700;
+  height: 20px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  text-align: center;
+  white-space: nowrap;
+  width: 107px;
+}
+
+.todopage .overlap-group2 {
+  height: 35px;
+  margin-top: 27px;
+  position: relative;
+  width: 319px;
+}
+
+.todopage .vector {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 7px;
+}
+
+.todopage .group {
+  align-items: flex-start;
+  display: flex;
+  gap: 15px;
+  height: 35px;
+  left: 0;
+  min-width: 319px;
+  position: absolute;
+  top: 0;
+}
+
+.todopage .ellipse-2 {
+  align-self: center;
+  height: 18px;
+  width: 16px;
+}
+
+.todopage .text-container {
+  height: 35px;
+  margin-top: 0;
+  position: relative;
+  width: 285px;
+}
+
+.todopage .text {
+  color: #322a2a;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  height: 35px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  text-decoration: line-through;
+  top: 0;
+  width: 175px;
+}
+
+.todopage .text-1 {
+  height: 35px;
+  left: 110px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 175px;
+}
+
+.todopage .group-7 {
+  align-items: flex-start;
+  display: flex;
+  gap: 15px;
+  margin-left: 0;
+  margin-top: 7px;
+  min-width: 207px;
+  padding: 0 0.0px;
+}
+
+.todopage .ellipse-3 {
+  align-self: center;
+  background-color: #d9d9d9;
+  border-radius: 7.89px/8.94px;
+  height: 18px;
+  margin-bottom: 0;
+  width: 16px;
+}
+
+.todopage .text-2 {
+  height: 35px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: 0;
+  text-align: center;
+  width: 175px;
+}
+
+.todopage .ellipse-4 {
+  align-self: center;
+  background-color: #dbdbdb;
+  border-radius: 7.89px/8.94px;
+  height: 18px;
+  margin-bottom: 0;
+  width: 16px;
+}
+
+.todopage .overlap-group3 {
+  height: 15px;
+  margin-left: 0;
+  margin-top: 7px;
+  position: relative;
+  width: 228px;
+}
+
+.todopage .ellipse-1 {
+  background-color: #84c4ff;
+  border-radius: 7.36px;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.todopage .text-container-1 {
+  height: 15px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 226px;
+}
+
+.todopage .text-7 {
+  color: var(--textwhite-default);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  height: 10px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  white-space: nowrap;
+  width: 10px;
+}
+
+.todopage .text-7-1 {
+  height: 15px;
+  left: 4px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 222px;
+}
+
+.todopage .rectangle-70 {
+  margin-bottom: -946.33px;
+  margin-left: 1868px;
+}
+
+.todopage .group-82 {
+  align-self: center;
+  height: 35px;
+  margin-right: 20.18px;
+  margin-top: 50px;
+  position: relative;
+  width: 325px;
+}
+
+.todopage .overlap-group5 {
+  height: 35px;
+  left: 130px;
+  position: absolute;
+  top: 0;
+  width: 192px;
+}
+
+.todopage .vs {
+  color: #280909;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  height: 35px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 26.0px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 64px;
+}
+
+.todopage .line-3 {
+  left: 62px;
+}
+
+.todopage .line-1 {
+  left: 0;
+}
+
+.todopage .group-81 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: -83.95px;
+  margin-top: 50px;
+  min-height: 205px;
+  width: 448px;
+}
+
+.todopage .group-container-1 {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  gap: 30px;
+  margin-left: -1.0px;
+  min-width: 294px;
+}
+
+.todopage .group-2 {
+  align-self: flex-end;
+  height: 34px;
+  width: 31px;
+}
+
+.todopage .overlap-group4-1 {
+  align-items: flex-start;
+  background-color: #ec9595;
+  border-radius: 3px;
+  display: flex;
+  height: 30px;
+  min-width: 233px;
+  padding: 5.3px 75.7px;
+}
+
+.todopage .text-73 {
+  color: #fafafa;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxs);
+  font-weight: 700;
+  height: 18px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  text-align: center;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.todopage .overlap-group2-1 {
+  height: 35px;
+  margin-left: 6.1px;
+  margin-top: 30px;
+  position: relative;
+  width: 319px;
+}
+
+.todopage .ellipse-2-1 {
+  align-self: center;
+  height: 18px;
+  margin-bottom: 0;
+  width: 16px;
+}
+
+.todopage .group-74 {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  margin-right: 106.31px;
+  margin-top: 7px;
+  min-width: 207px;
+  padding: 0 0.0px;
+}
+
+.todopage .ellipse-3-1 {
+  background-color: #d9d9d9;
+  border-radius: 7.89px/8.94px;
+  height: 18px;
+  margin-top: 0;
+  width: 16px;
+}
+
+.todopage .text-76 {
+  align-self: flex-end;
+  height: 35px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-bottom: 0;
+  text-align: center;
+  width: 175px;
+}
+
+.todopage .group-75 {
+  align-items: flex-start;
+  display: flex;
+  gap: 15px;
+  margin-right: 106.31px;
+  margin-top: 7px;
+  min-width: 207px;
+  padding: 0 0.0px;
+}
+
+.todopage .overlap-group3-1 {
+  height: 15px;
+  margin-right: 85.17px;
+  margin-top: 7px;
+  position: relative;
+  width: 228px;
+}
+
+.todopage .ellipse-2-2 {
+  background-color: #ef3d5d;
+  border-radius: 7.36px;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.todopage .rectangle-73 {
+  align-self: flex-end;
+  margin-right: -2187.0px;
+  margin-top: 879px;
+}
+
+.todopage .line {
+  height: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 130px;
+}
+
+.todopage .rectangle {
+  height: 67px;
+  width: 381px;
+}

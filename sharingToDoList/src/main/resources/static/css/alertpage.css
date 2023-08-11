@@ -1,0 +1,89 @@
+/* screen - alertpage */
+
+.alertpage {
+  align-items: center;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 841px;
+  padding: 29px 7px;
+  width: 386px;
+}
+
+.alertpage .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 26px;
+  margin-left: 4.5px;
+  min-width: 347px;
+}
+
+.alertpage .vector {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 17px;
+  width: 19px;
+}
+
+.alertpage .text-32 {
+  align-self: center;
+  height: 21px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-left: 104px;
+  margin-top: 0.76px;
+  text-align: center;
+  width: 98px;
+}
+
+.alertpage .text-33 {
+  cursor: pointer;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-left: 84px;
+  text-align: center;
+  width: 43px;
+}
+
+.alertpage .line-5 {
+  margin-top: 43px;
+}
+
+.alertpage .group-53 {
+  margin-top: 9px;
+}
+
+.alertpage .text-3 {
+  color: #736868;
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxs);
+  font-weight: 400;
+  height: 51px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  width: 359px;
+}
+
+.alertpage .line {
+  margin-top: 9px;
+}
+
+.alertpage .group-55 {
+  margin-top: 10px;
+}
+
+.alertpage .group {
+  align-items: flex-start;
+  align-self: flex-end;
+  cursor: pointer;
+  display: flex;
+  min-width: 361px;
+}
+
+.alertpage .line-1 {
+  height: 1px;
+  margin-right: 3.0px;
+  width: 347px;
+}

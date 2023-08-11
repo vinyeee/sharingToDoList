@@ -1,0 +1,130 @@
+/* screen - login */
+
+.login {
+  align-items: center;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 860px;
+  overflow: hidden;
+  width: 395px;
+}
+
+.login .simple-iconsnaver {
+  align-self: flex-start;
+  height: 24px;
+  width: 24px;
+}
+
+.login .text-20 {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: -7px;
+  margin-right: 27.0px;
+  margin-top: 104px;
+  min-height: 21px;
+  text-align: center;
+  white-space: nowrap;
+  width: 78px;
+}
+
+.login .group-56 {
+  margin-top: 65px;
+}
+
+.login .overlap-group {
+  background-color: #f0dd2f;
+  padding: 0 39px;
+}
+
+.login .rikakao-talk-fill {
+  height: 31px;
+  width: 32px;
+}
+
+.login .text-22 {
+  color: var(--textwhite-default);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: 5.0px;
+  min-height: 22px;
+  width: 189px;
+}
+
+.login .group-57 {
+  margin-top: 22px;
+}
+
+.login .overlap-group1 {
+  background-color: #4ec15a;
+  padding: 16px 39px;
+}
+
+.login .simple-iconsnaver-1 {
+  height: 24px;
+  margin-bottom: 1.0px;
+  width: 24px;
+}
+
+.login .text-23 {
+  align-self: flex-end;
+  color: var(--textwhite-default);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 22px;
+  width: 189px;
+}
+
+.login .text {
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-bottom: -7px;
+  margin-left: 3.0px;
+  margin-top: 20px;
+  min-height: 9px;
+  white-space: nowrap;
+  width: 168px;
+}
+
+.login .text-21 {
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-right: 27.0px;
+  margin-top: 428px;
+  min-height: 21px;
+  text-align: center;
+  width: 102px;
+}
+
+.login .rectangle-66 {
+  align-self: flex-end;
+  height: 100px;
+  margin-right: -2342px;
+  margin-top: 1799px;
+  width: 100px;
+}
+
+.login .group {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  margin-right: 3.0px;
+  min-width: 322px;
+}
+
+.login .overlap {
+  align-items: center;
+  border-radius: 3px;
+  display: flex;
+  gap: 17px;
+  height: 59px;
+  justify-content: flex-end;
+  min-width: 320px;
+}
