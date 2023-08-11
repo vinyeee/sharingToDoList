@@ -1,0 +1,154 @@
+/* screen - signup */
+
+.signup {
+  align-items: center;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 214px;
+  height: 859px;
+  padding: 7px 0;
+  width: 403px;
+}
+
+.signup .overlap-group3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-right: 32.0px;
+  margin-top: 20px;
+  min-height: 548px;
+  width: 325px;
+}
+
+.signup .icon-arrow-left {
+  cursor: pointer;
+  height: 16px;
+  margin-left: 5px;
+  margin-top: 3px;
+  width: 28px;
+}
+
+.signup .overlap-group4 {
+  height: 497px;
+  position: relative;
+  width: 325px;
+}
+
+.signup .text-13 {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 61px;
+  width: 54px;
+}
+
+.signup .user-info-input {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 21px;
+  left: 5px;
+  position: absolute;
+  top: 0;
+}
+
+.signup .text-14 {
+  height: 33.03px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 172px;
+}
+
+.signup .input_text {
+  height: 79px;
+  position: relative;
+  width: 320px;
+}
+
+.signup .overlap-group-1 {
+  height: 52px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 320px;
+}
+
+.signup .rectangle {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.signup .text-16 {
+  left: 8px;
+  position: absolute;
+  top: 9px;
+  width: 236px;
+}
+
+.signup .text-15 {
+  left: -6px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 75px;
+}
+
+.signup .overlap-group {
+  background-image: url(../img/rectangle-4.svg);
+  background-size: 100% 100%;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 320px;
+}
+
+.signup .text-1 {
+  left: -8px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 75px;
+}
+
+.signup .text-19 {
+  color: var(--shady-lady);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxxxs);
+  font-weight: 700;
+  height: 43px;
+  position: relative;
+  width: 320px;
+}
+
+.signup .sign-up-button {
+  align-items: flex-start;
+  background-color: #302727;
+  cursor: pointer;
+  display: flex;
+  height: 63px;
+  min-width: 403px;
+  padding: 20.8px 151.1px;
+}
+
+.signup .text_label {
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 18px;
+  text-align: center;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.signup .text {
+  letter-spacing: 0;
+  line-height: normal;
+}

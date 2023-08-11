@@ -1,0 +1,169 @@
+/* screen - userinfo */
+
+.userinfo {
+  align-items: center;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 843px;
+  padding: 3px 0;
+  width: 380px;
+}
+
+.userinfo .overlap-group5 {
+  height: 89px;
+  margin-right: 4.0px;
+  margin-top: 24px;
+  position: relative;
+  width: 320px;
+}
+
+.userinfo .headertitle-with-back {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  height: 73px;
+  left: 0;
+  min-width: 320px;
+  padding: 3px 0;
+  position: absolute;
+  top: 0;
+}
+
+.userinfo .icon-arrow-left {
+  cursor: pointer;
+  height: 16px;
+  width: 28px;
+}
+
+.userinfo .text-29 {
+  left: 50px;
+  position: absolute;
+  text-align: center;
+  top: 54px;
+  width: 199px;
+}
+
+.userinfo .overlap-group4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-right: 9.0px;
+  margin-top: 23px;
+  min-height: 80px;
+  width: 325px;
+}
+
+.userinfo .text-30 {
+  min-height: 19px;
+  text-align: center;
+  width: 54px;
+}
+
+.userinfo .overlap-group-1 {
+  align-self: flex-end;
+  height: 52px;
+  position: relative;
+  width: 320px;
+}
+
+.userinfo .rectangle {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.userinfo .text-24 {
+  left: 7px;
+  position: absolute;
+  top: 9px;
+  width: 236px;
+}
+
+.userinfo .input_text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-right: 4.0px;
+  margin-top: 20px;
+  min-height: 79px;
+  width: 320px;
+}
+
+.userinfo .text-25 {
+  margin-left: -6px;
+  margin-top: -1px;
+  min-height: 19px;
+  text-align: center;
+  width: 75px;
+}
+
+.userinfo .overlap-group1 {
+  height: 52px;
+  position: relative;
+  width: 320px;
+}
+
+.userinfo .text-26 {
+  left: 8px;
+  position: absolute;
+  top: 9px;
+  width: 236px;
+}
+
+.userinfo .text-2 {
+  margin-left: -8px;
+  margin-top: -1px;
+  min-height: 19px;
+  text-align: center;
+  width: 75px;
+}
+
+.userinfo .overlap-group {
+  background-image: url(../img/rectangle-4-3.svg);
+  background-size: 100% 100%;
+  height: 50px;
+  position: relative;
+  width: 320px;
+}
+
+.userinfo .text-31 {
+  color: var(--shady-lady);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxxxs);
+  font-weight: 700;
+  margin-left: 6.0px;
+  margin-top: 14px;
+  min-height: 43px;
+  width: 320px;
+}
+
+.userinfo .button {
+  align-items: flex-start;
+  background-color: #302727;
+  cursor: pointer;
+  display: flex;
+  height: 64px;
+  margin-top: 203px;
+  min-width: 380px;
+  padding: 21.1px 142.5px;
+}
+
+.userinfo .text_label {
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 19px;
+  text-align: center;
+  white-space: nowrap;
+  width: 93px;
+}
+
+.userinfo .text {
+  letter-spacing: 0;
+  line-height: normal;
+}

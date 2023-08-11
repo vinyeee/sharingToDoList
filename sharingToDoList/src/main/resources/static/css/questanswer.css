@@ -1,0 +1,242 @@
+/* screen - questanswer */
+
+.questanswer {
+  align-items: flex-end;
+  background-color: var(--textwhite-default);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 851px;
+  padding: 32px 21.5px;
+  width: 397px;
+}
+
+.questanswer .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 26px;
+  min-width: 347px;
+}
+
+.questanswer .vector {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 17px;
+  width: 19px;
+}
+
+.questanswer .text-1 {
+  align-self: center;
+  height: 21px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-left: 104px;
+  margin-top: 0.76px;
+  text-align: center;
+  width: 98px;
+}
+
+.questanswer .text-2 {
+  cursor: pointer;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-left: 84px;
+  text-align: center;
+  width: 43px;
+}
+
+.questanswer .mate-name {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 14.0px;
+  margin-top: 56px;
+  min-height: 33px;
+  text-align: center;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.questanswer .quest-arrive {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: -8px;
+  margin-right: 6.5px;
+  margin-top: 6px;
+  min-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  width: 327px;
+}
+
+.questanswer .quest-info {
+  align-items: flex-start;
+  align-self: center;
+  background-image: url(../img/rectangle-95-1.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 14.0px;
+  margin-top: 33px;
+  min-height: 442px;
+  padding: 39.5px 24.8px;
+  width: 323px;
+}
+
+.questanswer .text-5 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 1.61px;
+  min-height: 22px;
+  width: 193px;
+}
+
+.questanswer .overlap-group {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-96-1.svg);
+  margin-top: 8px;
+  padding: 12.8px 1.0px;
+}
+
+.questanswer .text-8 {
+  letter-spacing: 0;
+  line-height: 15px;
+  text-align: center;
+  white-space: nowrap;
+  width: 75px;
+}
+
+.questanswer .text-6 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 3.46px;
+  margin-top: 25px;
+  min-height: 22px;
+  width: 94px;
+}
+
+.questanswer .overlap-group2 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-97-1.svg);
+  margin-top: 5px;
+  padding: 12.8px 0.0px;
+}
+
+.questanswer .text-9 {
+  letter-spacing: 0;
+  line-height: 15px;
+  text-align: center;
+  white-space: nowrap;
+  width: 186px;
+}
+
+.questanswer .text-7 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 0.4px;
+  margin-top: 21px;
+  min-height: 21px;
+  width: 184px;
+}
+
+.questanswer .overlap-group1 {
+  align-items: flex-start;
+  background-image: url(../img/rectangle-98-1.svg);
+  margin-top: 13px;
+  padding: 10.8px 0.1px;
+}
+
+.questanswer .text-10 {
+  color: var(--eerie-black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  width: 147px;
+}
+
+.questanswer .text-12 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 3.89px;
+  margin-top: 20px;
+  min-height: 22px;
+  width: 99px;
+}
+
+.questanswer .overlap-group3 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-99-1.svg);
+  margin-top: 6px;
+  padding: 12.8px 1.1px;
+}
+
+.questanswer .text-11 {
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  width: 146px;
+}
+
+.questanswer .quest-msg {
+  letter-spacing: 0;
+  line-height: 14px;
+  margin-right: 21.5px;
+  margin-top: 35px;
+  min-height: 21px;
+  text-align: center;
+  width: 297px;
+}
+
+.questanswer .overlap-group-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 53px;
+  margin-right: 19.5px;
+  margin-top: 24px;
+  min-width: 299px;
+}
+
+.questanswer .overlap-group-1 {
+  align-items: center;
+  background-color: var(--asphalt);
+  border-radius: 3px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  min-width: 122px;
+  padding: 0 18.2px;
+}
+
+.questanswer .text {
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  width: 85px;
+}
+
+.questanswer .overlap-group1-1 {
+  align-items: flex-start;
+  background-color: var(--asphalt);
+  border-radius: 3px;
+  display: flex;
+  height: 48px;
+  min-width: 122px;
+  padding: 13px 18px;
+}
+
+.questanswer .overlap {
+  align-self: flex-end;
+  background-size: 100% 100%;
+  display: flex;
+  height: 42px;
+  min-width: 272px;
+}
