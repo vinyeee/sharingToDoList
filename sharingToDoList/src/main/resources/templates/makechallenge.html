@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
     <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
@@ -27,23 +27,31 @@
                 <img class="rectangle-95" src="img/rectangle-95.svg" alt="Rectangle 95" />
                 <div class="group-37 notosanskr-normal-black-15px">
                   <p class="text-55">👥 함께 할 투두 메이트</p>
+                  <form action="/find-mates" method="post">
                   <div class="overlap-group">
-                    <div class="x">슈퍼맨&nbsp;&nbsp; x</div>
-                    <img class="rectangle-72" src="img/rectangle-72.svg" alt="Rectangle 72" />
+                    <label for="selectedMate">Select a Mate:</label>
+                    <select id="selectedMate" name="selectedMate" multiple="multiple">
+                      <option value="">Select a mate</option>
+                      <option th:each="mate : ${mates}" th:value="${mate.mateNickname}" th:text="${mate.mateNickname}"></option>
+                    </select>
                   </div>
+                  </form>
+<!--                    <div class="x">슈퍼맨&nbsp;&nbsp; x</div>-->
+<!--                    <img class="rectangle-72" src="img/rectangle-72.svg" alt="Rectangle 72" />-->
+
                   <div class="text-56">📛 챌린지 명</div>
                   <div class="overlap-group2">
-                    <div class="ex notosanskr-normal-shady-lady-15px">ex) 비상금 모으기 대작전</div>
+                    <input type="text" name="quest" class="ex notosanskr-normal-shady-lady-15px" placeholder="ex) 비상금 모으기 대작전" required>
                   </div>
                   <div class="text-57">💰 챌린지 보상 금액</div>
                   <div class="overlap-group3">
                     <img class="rectangle-98" src="img/rectangle-96.svg" alt="Rectangle 98" />
-                    <div class="text-58 notosanskr-normal-shady-lady-15px">최소 금액 3000원</div>
+                    <input type="number" name="prize" class="text-58 notosanskr-normal-shady-lady-15px" placeholder="최소 금액 3000원" required>
                   </div>
                   <div class="text-60">⏳ 기간 설정</div>
                   <div class="overlap-group1">
                     <img class="rectangle-99" src="img/rectangle-96.svg" alt="Rectangle 99" />
-                    <div class="text-59">최소 1시간</div>
+                    <input type="number" name="time" class="text-59" placeholder="최소 1시간" required>
                     <img class="polygon-1" src="img/polygon-1.svg" alt="Polygon 1" />
                   </div>
                 </div>
@@ -53,11 +61,22 @@
           <p class="text-61">전송된 챌린지 요청을 수락하게 되면 챌린지가 최종생성 됩니다</p>
           <a href="mainpage.html">
             <div class="group-36">
-              <div class="overlap-group5"><div class="text-62 notosanskr-normal-white-20px">챌린지 요청</div></div>
-            </div></a
-          >
+              <div class="overlap-group5">
+                <div class="text-62 notosanskr-normal-white-20px" id="challengeRequestButton">챌린지 요청</div>
+              </div>
+            </div></a>
         </div>
       </div>
     </div>
+    <script>
+    //작성한 챌린지 제출
+        document.addEventListener("DOMContentLoaded", function() {
+            const challengeRequestButton = document.getElementById("challengeRequestButton");
+
+            challengeRequestButton.addEventListener("click", function() {
+                document.getElementById("yourFormId").submit(); //id 받아와야 함
+            });
+        });
+    </script>
   </body>
 </html>

@@ -8,16 +8,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class HomeController {
     @GetMapping("/")
-    public String home(){
+    public String home() {
         return "start";
     }
 
-    @GetMapping("/main")
-    public String toDoMain(){
+    @GetMapping("/mainpage")
+    public String mainPage() {
         return "mainpage";
     }
 
-    @GetMapping("/challenge")
-    public String makeChallenge(){
+    @GetMapping("/makechallenge")
+    public String makeChallenge() {
         return "makechallenge";
+    }
 }
