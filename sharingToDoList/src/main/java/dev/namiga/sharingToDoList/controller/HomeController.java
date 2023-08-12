@@ -12,6 +12,11 @@ public class HomeController {
         return "start";
     }
 
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+
     @GetMapping("/mainpage")
     public String mainPage() {
         return "mainpage";

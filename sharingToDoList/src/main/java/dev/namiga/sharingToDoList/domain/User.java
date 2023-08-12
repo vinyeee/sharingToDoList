@@ -11,6 +11,7 @@ import java.util.List;
 @Setter
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
     private String token;
     private String bank;
