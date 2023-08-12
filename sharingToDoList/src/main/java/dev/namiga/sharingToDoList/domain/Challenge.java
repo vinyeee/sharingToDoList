@@ -28,7 +28,7 @@ public class Challenge {
     @JoinColumn(name = "userId")
     private User userId;
 
-    @OneToMany(mappedBy = "challenge", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "challengeId" , cascade = CascadeType.ALL)
     private List<To_do_list> to_do_list;
 
 }
