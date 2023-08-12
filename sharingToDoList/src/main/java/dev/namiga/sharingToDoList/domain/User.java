@@ -19,16 +19,16 @@ public class User {
     private String platform;
     private String nickName;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "userId")
     private List<Challenge> challenge;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "userId")
     private List<To_do_list> to_do_list;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "userId")
     private List<Analysis> analysis;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "userId")
     private List<Mate> mate;
 
 }

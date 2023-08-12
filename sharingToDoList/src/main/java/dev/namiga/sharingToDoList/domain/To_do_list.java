@@ -1,10 +1,7 @@
 package dev.namiga.sharingToDoList.domain;
 
-
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.Entity;
 import javax.persistence.*;
 
 @Entity
@@ -15,14 +12,14 @@ public class To_do_list {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long todoId;
     private String details;
-    private String check;
+    private String complete;
 
-    @ManyToOne
-    @JoinColumn(name = "challengeId")
-    private Challenge challenge;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "challengeId",referencedColumnName ="challengeId")
+    private Challenge challengeId;
 
-    @ManyToOne
-    @JoinColumn(name = "userId")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "userId",referencedColumnName ="userId")
     private User userId;
 
 }
