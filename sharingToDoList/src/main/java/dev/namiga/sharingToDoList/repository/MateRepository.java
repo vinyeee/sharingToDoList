@@ -11,4 +11,5 @@ public interface MateRepository extends JpaRepository<Mate, String> {
     List<Mate> findMatesByUserId(User userId);
 
     List<Mate> findByUserId(User userId);
+
 }

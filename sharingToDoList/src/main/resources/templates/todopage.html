@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
     <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/css/todopage.css" />
     <link rel="stylesheet" type="text/css" href="/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="/css/globals.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="todopage" />
@@ -25,77 +26,309 @@
           <p class="text-65">06 : 36 : 59</p>
         </div>
         <div class="group-80">
-          <img class="group-1" src="/img/group-1@2x.png" alt="Group" />
-          <div class="group-container">
-            <div class="overlap-group4"><div class="text-70 valign-text-middle">예빈맘</div></div>
-            <div class="overlap-group2">
-              <img class="vector" src="/img/vector-1-1.svg" alt="Vector 1" />
-              <div class="group">
-                <img class="ellipse-2" src="/img/ellipse-2.svg" alt="Ellipse 2" />
-                <div class="text-container">
-                  <div class="text valign-text-middle">빨래 돌리기</div>
-                  <div class="text-1 valign-text-middle notosanskr-normal-black-16px">👋</div>
-                </div>
+<!--         to- do list code -->
+          <div class="searchBox">
+            <img class="group-2" src="/img/group-2@2x.png" alt="Group" />
+            <input type="button" class="searchBtn btn-all" value="전체 : 0">
+            <input type="button" class="searchBtn btn-before" value="진행중 : 0">
+            <input type="button" class="searchBtn btn-after" value="완료 : 0">
+          </div>
+
+          <!-- Todo-List -->
+          <div class="listBox">
+            <!-- 사용자의 to-do-list -->
+            <div class="addBox">
+              <div class="addBox_inner">
+                <input type="text" class="addTxt" placeholder="To-do list 작성">
+                <input type="button" class="addBtn" value="+">
               </div>
             </div>
-            <div class="group-7">
-              <div class="ellipse-3"></div>
-              <div class="text-2 valign-text-middle notosanskr-normal-black-16px">아침식사 설거지</div>
-            </div>
-            <div class="group-7">
-              <div class="ellipse-4"></div>
-              <div class="text-2 valign-text-middle notosanskr-normal-black-16px">양말 개기</div>
-            </div>
-            <div class="overlap-group3">
-              <div class="ellipse-1"></div>
-              <div class="text-container-1">
-                <div class="text-7 valign-text-middle">+</div>
-                <div class="text-7-1 valign-text-middle notosanskr-normal-shady-lady-16px">할 일을 추가해보세요</div>
-              </div>
-            </div>
+
+            <!-- 전체선택/삭제 -->
+<!--            <div class="allCheckBox">-->
+<!--              <label class="allSelect_lb"><input type="checkbox" class="allSelect">전체선택</label>-->
+<!--              <a href="javascript:void(0)" class="allDel">전체삭제</a>-->
+<!--            </div>-->
+
+            <!-- 목록 -->
+            <div class="listBox_inner"></div>
           </div>
-          <img class="rectangle-70 rectangle" src="/img/rectangle-70@2x.png" alt="Rectangle 70" />
-        </div>
-        <div class="group-82">
-          <div class="overlap-group5">
-            <div class="vs valign-text-middle">v.s</div>
-            <img class="line-3 line" src="/img/line-3.svg" alt="Line 3" />
-          </div>
-          <img class="line-1 line" src="/img/line-1.svg" alt="Line 1" />
         </div>
         <div class="group-81">
           <div class="group-container-1">
             <img class="group-2" src="/img/group-2@2x.png" alt="Group" />
             <div class="overlap-group4-1"><div class="text-73 valign-text-middle">슈퍼맨</div></div>
           </div>
-          <div class="overlap-group2-1">
-            <img class="vector" src="/img/vector-2-1.svg" alt="Vector 2" />
-            <div class="group">
-              <img class="ellipse-2-1" src="/img/ellipse-2-1.svg" alt="Ellipse 2" />
-              <div class="text-container">
-                <div class="text valign-text-middle">빨래 돌리기</div>
-                <div class="text-1 valign-text-middle notosanskr-normal-black-16px">👋</div>
-              </div>
-            </div>
-          </div>
-          <div class="group-74">
-            <div class="ellipse-3-1"></div>
-            <div class="text-76 valign-text-middle notosanskr-normal-black-16px">아침식사 설거지</div>
-          </div>
-          <div class="group-75">
-            <div class="ellipse-4"></div>
-            <div class="text-2 valign-text-middle notosanskr-normal-black-16px">양말 개기</div>
-          </div>
-          <div class="overlap-group3-1">
-            <div class="ellipse-2-2"></div>
-            <div class="text-container-1">
-              <div class="text-7 valign-text-middle">+</div>
-              <div class="text-7-1 valign-text-middle notosanskr-normal-shady-lady-16px">할 일을 추가해보세요</div>
-            </div>
-          </div>
-          <img class="rectangle-73 rectangle" src="/img/rectangle-70@2x.png" alt="Rectangle 73" />
+          <ul>
+            <li th:each="task : ${todoItems}"> <!--이 챌린지를 함께하는 메이트의 to_do_list 나열 -->
+              <span th:class="${task.complete == '완료'} ? 'completed-task' : 'incomplete-task'" th:text="${task.details}"></span>
+            </li>
+          </ul>
+        <!--삭제 예정 -->
+            <!--          <div class="overlap-group2-1">-->
+<!--            <img class="vector" src="/img/vector-2-1.svg" alt="Vector 2" />-->
+<!--            <div class="group">-->
+<!--              <img class="ellipse-2-1" src="/img/ellipse-2-1.svg" alt="Ellipse 2" />-->
+<!--              <div class="text-container">-->
+<!--                <div class="text valign-text-middle">빨래 돌리기</div>-->
+<!--                <div class="text-1 valign-text-middle notosanskr-normal-black-16px">👋</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="group-74">-->
+<!--            <div class="ellipse-3-1"></div>-->
+<!--            <div class="text-76 valign-text-middle notosanskr-normal-black-16px">아침식사 설거지</div>-->
+<!--          </div>-->
+<!--          <div class="group-75">-->
+<!--            <div class="ellipse-4"></div>-->
+<!--            <div class="text-2 valign-text-middle notosanskr-normal-black-16px">양말 개기</div>-->
+<!--          </div>-->
+<!--          <div class="overlap-group3-1">-->
+<!--            <div class="ellipse-2-2"></div>-->
+<!--            <div class="text-container-1">-->
+<!--              <div class="text-7 valign-text-middle">+</div>-->
+<!--              <div class="text-7-1 valign-text-middle notosanskr-normal-shady-lady-16px">할 일을 추가해보세요</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <img class="rectangle-73 rectangle" src="/img/rectangle-70@2x.png" alt="Rectangle 73" />-->
         </div>
       </div>
     </div>
   </body>
+<script>
+  let addBtn = document.querySelector('.addBtn')
+let addTxt = document.querySelector('.addTxt')
+let listBox_inner = document.querySelector('.listBox_inner')
+let delBtnEls = document.querySelectorAll('.delBtn')
+let listEls = document.querySelectorAll('.list')
+let allBtn = document.querySelector('.btn-all')
+let beforeBtn = document.querySelector('.btn-before')
+let afterBtn = document.querySelector('.btn-after')
+let listCheck = document.querySelectorAll('.listCheck');
+let allDel = document.querySelector('.allDel')
+let allSelect = document.querySelector('.allSelect')
+
+
+// 리스트 추가1 - 'enter'버튼으로 추가하기
+addTxt.addEventListener('keyup', function(e) {
+
+    if(e.key === 'Enter') {
+        addList()
+    }
+
+    checkList()
+    delList()
+    listCount()
+
+})
+
+
+// 리스트 추가2 - 추가(+)버튼으로 추가하기
+addBtn.addEventListener('click', function() {
+
+    addList()
+    checkList()
+    delList()
+    listCount()
+
+});
+
+
+// addTxt 입력창 null값 판단
+function addList() {
+
+    if(addTxt.value !== "") {
+
+        // list를 출력할 <div> 요소생성
+        let list = document.createElement('div')
+        list.setAttribute("class", "list")
+        list.innerHTML = `<label class="listLb"><input type="checkbox" class="listCheck">${addTxt.value}</label><button class="delBtn">x</button>`
+
+        listBox_inner.appendChild(list)
+        addTxt.value= ''
+        addTxt.style.borderBottom = '1px solid rgb(163, 155, 155)'
+
+        if(document.querySelector('.notice')) {
+             // 경고 메시지 <div>가 생성되어있는 경우 - 요소삭제(removeChild)
+            addBox = document.querySelector('.addBox')
+            let notice = document.querySelector('.notice')
+            addBox.removeChild(notice)
+        } else {
+            // 경고 메시지 <div>가 생성되어있지 않은 경우
+        }
+
+    } else {
+
+        // 텍스트 미입력시 경고 메시지 출력할 <div> 요소생성
+        let noticeEl = document.createElement('div')
+        noticeEl.setAttribute('class', 'notice')
+        noticeEl.innerHTML = '<span>* 내용을 입력해주세요</span>'
+
+        addTxt.style.borderBottom = '1px solid rgb(201, 65, 65)'
+
+        if(document.querySelector('.notice')) {
+            // 경고 메시지 <div>가 생성되어있는 경우
+        } else {
+            // 경고 메시지 <div>가 생성되어있지 않은 경우 - 요소추가(appendChild)
+            addBox = document.querySelector('.addBox')
+            addBox.appendChild(noticeEl)
+        }
+
+    }
+}
+
+
+// 리스트 체크(완료처리)
+function checkList() {
+
+    listCheck = document.querySelectorAll('.listCheck')
+    let listLb = document.querySelectorAll('.listLb')
+
+    listCheck.forEach((listEl, index) => listEl.addEventListener('click', function(){
+
+        if(listEl.checked == true) {
+            listLb[index].style.textDecoration = "line-through"
+        } else {
+            listLb[index].style.textDecoration = "none"
+        }
+
+        listCount();
+    }))
+}
+
+
+// 리스트 삭제
+function delList() {
+
+    delBtnEls = document.querySelectorAll('.delBtn')
+    listEls = document.querySelectorAll('.list')
+
+    delBtnEls.forEach((delEl, index) => delEl.addEventListener('click', function() {
+
+        listEls[index].remove()
+
+    }))
+
+    listCount()
+
+}
+
+
+// 전체조회
+allBtn.addEventListener('click', function() {
+
+    // document.querySelector('.listBox_inner').textContent = ""
+    // console.log(document.querySelector('.listBox_inner'))
+
+    listEls = document.querySelectorAll('.list')
+
+    listEls.forEach(listEl => {
+        listEl.style.display = ""
+    });
+
+})
+
+
+// 진행중 조회
+beforeBtn.addEventListener('click', function() {
+
+    listEls = document.querySelectorAll('.list')
+
+    for(let i=0; i<listCheck.length; i++) {
+
+        if(listCheck[i].checked == true) {
+            listEls[i].style.display = "none"
+        } else {
+            listEls[i].style.display = ""
+        }
+    }
+
+})
+
+
+// 완료 조회
+afterBtn.addEventListener('click', function() {
+
+    listEls = document.querySelectorAll('.list')
+
+    for(let i=0; i<listEls.length; i++) {
+        if(listCheck[i].checked == true) {
+            listEls[i].style.display = ""
+        } else {
+            listEls[i].style.display = "none"
+        }
+    }
+
+})
+
+
+// 조회 건수
+function listCount() {
+
+    let beforeArray = [];
+    let afterArray = [];
+
+    // 전체
+    listEls = document.querySelectorAll('.list')
+
+    for(let i=0; i<listEls.length; i++) {   // listCheck로 받으려면 재할당 명시해줘야함
+
+        if(listCheck[i].checked == false) {
+            // 진행중
+            beforeArray.push(listEls[i])
+        }  else {
+            // 완료
+            afterArray.push(listEls[i])
+        }
+    }
+
+    let beforeCount = beforeArray.length
+    let afterCount = afterArray.length
+    let allCount = beforeCount + afterCount
+
+    allBtn.value = '전체 : ' + allCount
+    beforeBtn.value =  '진행중 : ' + beforeCount
+    afterBtn.value = '완료 : ' + afterCount
+
+}
+
+
+// 전체선택
+allSelect.addEventListener('click', function() {
+
+    listCheck = document.querySelectorAll('.listCheck')
+    listLb = document.querySelectorAll('.listLb')
+
+    if(allSelect.checked == true) { // 전체선택 체크
+
+        for(let i=0; i<listCheck.length; i++) {
+            listCheck[i].checked = true;
+            listLb[i].style.textDecoration = "line-through"
+        }
+
+    } else {    // 전체선택 해제
+
+        for(let i=0; i<listCheck.length; i++) {
+            listCheck[i].checked = false;
+            listLb[i].style.textDecoration = "none"
+        }
+
+    }
+
+    listCount()
+
+})
+
+
+
+// 전체삭제
+allDel.addEventListener('click', function() {
+
+    listBox_inner.innerHTML = ''
+    allSelect.checked = false
+    listCount()
+
+})
+
+</script>
 </html>

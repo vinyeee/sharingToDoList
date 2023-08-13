@@ -27,8 +27,8 @@ public class HomeController {
         return "mainpage";
     }
 
-    @GetMapping("/todopage")
-    public String todoPage() {
-        return "todopage";
-    }
+//    @GetMapping("/todopage")   //TodoController에서 작업중
+//    public String todoPage() {
+//        return "todopage";
+//    }
 }
