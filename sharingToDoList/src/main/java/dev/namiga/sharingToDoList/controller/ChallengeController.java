@@ -31,14 +31,24 @@ public class ChallengeController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/find-mates")
+    @Autowired
+    private MateService mateService;
+
+    @GetMapping("/makechallenge")
 //    public String findMates(Model model, Principal principal) {
-    public String findMates(Model model, @RequestParam long userId) {
+    //, @RequestParam long userId
+    public String findMates(Model model) {
 //        long userId = Long.parseLong(principal.getName());
-        User user = userService.findByUserId(userId);
-
-        List<Mate> mates = MateService.findMatesByUserId(user);
-
+        User test = userService.findByUserId(2); //test를 위해 2넣음
+        List<Mate> mates = mateService.findMatesByUserId(test);
+        if(mates == null){
+            String msg = "메인페이지에서 투두 메이트를 설정하세요!";
+            System.out.println(msg);
+        }else {
+            for (Mate mate : mates) {
+                System.out.println(mate.getMateNickname());
+            }
+        }
         model.addAttribute("mates", mates);
         model.addAttribute("challenge", new Challenge());
 
@@ -58,7 +68,7 @@ public class ChallengeController {
 //            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 //            String userId = userDetails.getUsername(); //login 후 유저 정보 받아올 때 사용
 //
-            User user = userService.findByUserId(1);
+            User user = userService.findByUserId(2);
 
             if (user != null) {
                 Challenge challenge = new Challenge();

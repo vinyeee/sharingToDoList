@@ -91,9 +91,25 @@
   width: 177px;
 }
 
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.challengeButton{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .makechallenge .overlap-group {
-  background-image: url(../img/rectangle-96.svg);
-  background-size: 100% 100%;
   height: 43px;
   margin-left: 22.0px;
   margin-top: 5px;

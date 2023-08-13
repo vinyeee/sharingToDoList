@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 public class MateService {
 
     @Autowired
-    private static MateRepository mateRepository;
+    private MateRepository mateRepository;
 
-    public static List<Mate> findMatesByUserId(User userId) {
+    public List<Mate> findMatesByUserId(User userId) {
         return mateRepository.findMatesByUserId(userId);
     }
 

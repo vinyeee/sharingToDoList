@@ -21,39 +21,25 @@
             <h1 class="text-53 notosanskr-bold-eerie-black-28px">챌린지 생성</h1>
             <div class="text-54 notosanskr-normal-black-20px">효율적인 집안일 분배 시작!</div>
           </div>
+          <form class="centered-form" action="/create-challenge" method="post">
           <div class="group-38">
             <div class="group-87">
               <div class="overlap-group4">
                 <img class="rectangle-95" src="/img/rectangle-95.svg" alt="Rectangle 95" />
                 <div class="group-37 notosanskr-normal-black-15px">
                   <p class="text-55">👥 함께 할 투두 메이트</p>
-                  <form action="/find-mates" method="post">
-                  <div class="overlap-group">
-                    <label for="selectedMate">Select a Mate:</label>
-                    <select id="selectedMate" name="selectedMate" multiple="multiple">
-                      <option value="">Select a mate</option>
+                    <select id="selectedMate" name="selectedMate" multiple="multiple" class="overlap-group">
+                      <option value="">투두 메이트를 선택해 보세요!</option>
                       <option th:each="mate : ${mates}" th:value="${mate.mateNickname}" th:text="${mate.mateNickname}"></option>
                     </select>
-                  </div>
-                  </form>
-<!--                    <div class="x">슈퍼맨&nbsp;&nbsp; x</div>-->
-<!--                    <img class="rectangle-72" src="img/rectangle-72.svg" alt="Rectangle 72" />-->
+                      <button type="submit">친구 추가</button>
 
                   <div class="text-56">📛 챌린지 명</div>
-                  <div class="overlap-group2">
-                    <input type="text" name="quest" class="ex notosanskr-normal-shady-lady-15px" placeholder="ex) 비상금 모으기 대작전" required>
-                  </div>
+                    <input type="text" name="quest" class="overlap-group" placeholder="ex) 비상금 모으기 대작전" required>
                   <div class="text-57">💰 챌린지 보상 금액</div>
-                  <div class="overlap-group3">
-                    <img class="rectangle-98" src="/img/rectangle-96.svg" alt="Rectangle 98" />
-                    <input type="number" name="prize" class="text-58 notosanskr-normal-shady-lady-15px" placeholder="최소 금액 3000원" required>
-                  </div>
+                    <input type="number" name="prize" id="prizeInput" class="overlap-group" placeholder="최소 금액 3000원" required>
                   <div class="text-60">⏳ 기간 설정</div>
-                  <div class="overlap-group1">
-                    <img class="rectangle-99" src="/img/rectangle-96.svg" alt="Rectangle 99" />
-                    <input type="number" name="time" class="text-59" placeholder="최소 1시간" required>
-                    <img class="polygon-1" src="/img/polygon-1.svg" alt="Polygon 1" />
-                  </div>
+                    <input type="number" name="time" class="overlap-group" placeholder="최소 1시간" required>
                 </div>
               </div>
             </div>
@@ -61,22 +47,22 @@
           <p class="text-61">전송된 챌린지 요청을 수락하게 되면 챌린지가 최종생성 됩니다</p>
           <a href="mainpage">
             <div class="group-36">
-              <div class="overlap-group5">
-                <div class="text-62 notosanskr-normal-white-20px" id="challengeRequestButton">챌린지 요청</div>
-              </div>
+                <button type="submit" class="challengeButton">챌린지 요청</button>
             </div></a>
         </div>
       </div>
     </div>
     <script>
-    //작성한 챌린지 제출
-        document.addEventListener("DOMContentLoaded", function() {
-            const challengeRequestButton = document.getElementById("challengeRequestButton");
+        document.getElementById('prizeInput').addEventListener('blur', function() {
+    const enteredValue = parseInt(this.value);
+    if (enteredValue < 3000) {
+        alert('최소 금액은 3000원 이상이어야 합니다. 다시 입력해주세요.');
+        this.value = '';
+        this.focus();
+    }
+});
 
-            challengeRequestButton.addEventListener("click", function() {
-                document.getElementById("yourFormId").submit(); //id 받아와야 함
-            });
-        });
     </script>
+  </form>
   </body>
 </html>

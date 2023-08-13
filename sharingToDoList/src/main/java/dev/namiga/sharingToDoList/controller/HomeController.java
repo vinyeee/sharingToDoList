@@ -12,6 +12,11 @@ public class HomeController {
         return "start";
     }
 
+    @GetMapping("/signup")
+    public String singupPage() {
+        return "signup";
+    }
+
     @GetMapping("/login")
     public String loginPage() {
         return "login";
@@ -22,8 +27,8 @@ public class HomeController {
         return "mainpage";
     }
 
-    @GetMapping("/makechallenge")
-    public String makeChallenge() {
-        return "makechallenge";
+    @GetMapping("/todopage")
+    public String todoPage() {
+        return "todopage";
     }
 }
