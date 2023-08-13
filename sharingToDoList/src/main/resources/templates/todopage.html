@@ -144,6 +144,34 @@ function addList() {
         list.setAttribute("class", "list")
         list.innerHTML = `<label class="listLb"><input type="checkbox" class="listCheck">${addTxt.value}</label><button class="delBtn">x</button>`
 
+        //작성한 내용 controller의 add-todo에 전송
+          fetch('/add-todo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ todoText: addTxt.value }) // Send the value of addTxt
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Response from the backend
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+        // Rest of your addList logic
+    }
+});
+Please note that this is a simplified example. In a real-world application, you would also handle error cases and validation properly on both the frontend and the backend. Also, make sure to adjust the URL paths and the structure of the POST request based on your application's setup.
+
+
+
+
+
+
+
+
         listBox_inner.appendChild(list)
         addTxt.value= ''
         addTxt.style.borderBottom = '1px solid rgb(163, 155, 155)'
