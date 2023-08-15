@@ -1,9 +1,8 @@
 package dev.namiga.sharingToDoList.controller;
 
-import dev.namiga.sharingToDoList.domain.Challenge;
-import dev.namiga.sharingToDoList.domain.Mate;
-import dev.namiga.sharingToDoList.domain.User;
-import dev.namiga.sharingToDoList.repository.UserRepository;
+import dev.namiga.sharingToDoList.domain.ChallengeEntity;
+import dev.namiga.sharingToDoList.domain.MateEntity;
+import dev.namiga.sharingToDoList.domain.UserEntity;
 import dev.namiga.sharingToDoList.service.ChallengeService;
 import dev.namiga.sharingToDoList.service.MateService;
 import dev.namiga.sharingToDoList.service.UserService;
@@ -39,18 +38,18 @@ public class ChallengeController {
     //, @RequestParam long userId
     public String findMates(Model model) {
 //        long userId = Long.parseLong(principal.getName());
-        User test = userService.findByUserId(2); //test를 위해 2넣음
-        List<Mate> mates = mateService.findMatesByUserId(test);
+        UserEntity test = userService.findByUserId(2); //test를 위해 2넣음
+        List<MateEntity> mates = mateService.findMatesByUserId(test);
         if(mates == null){
             String msg = "메인페이지에서 투두 메이트를 설정하세요!";
             System.out.println(msg);
         }else {
-            for (Mate mate : mates) {
+            for (MateEntity mate : mates) {
                 System.out.println(mate.getMateNickname());
             }
         }
         model.addAttribute("mates", mates);
-        model.addAttribute("challenge", new Challenge());
+        model.addAttribute("challenge", new ChallengeEntity());
 
         return "makeChallenge";
     }
@@ -68,10 +67,10 @@ public class ChallengeController {
 //            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 //            String userId = userDetails.getUsername(); //login 후 유저 정보 받아올 때 사용
 //
-            User user = userService.findByUserId(2);
+            UserEntity user = userService.findByUserId(2);
 
             if (user != null) {
-                Challenge challenge = new Challenge();
+                ChallengeEntity challenge = new ChallengeEntity();
                 challenge.setUserId(user);
                 challenge.setMate(selectedMate);
                 challenge.setQuest(quest);

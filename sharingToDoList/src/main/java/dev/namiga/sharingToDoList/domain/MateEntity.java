@@ -7,13 +7,13 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Mate {
+public class MateEntity {
     @Id
     private String mateNickname;
     private String together;
 
     @ManyToOne
     @JoinColumn(name = "userId")
-    private User userId;
+    private UserEntity userId;
 
 }

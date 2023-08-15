@@ -1,15 +1,15 @@
 package dev.namiga.sharingToDoList.repository;
 
-import dev.namiga.sharingToDoList.domain.Challenge;
-import dev.namiga.sharingToDoList.domain.To_do_list;
+import dev.namiga.sharingToDoList.domain.ChallengeEntity;
+import dev.namiga.sharingToDoList.domain.ToDoListEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface TodoRepository extends JpaRepository {
+public interface TodoRepository extends JpaRepository<ToDoListEntity,Long> {
 
-    List<To_do_list> findByUserIdAndChallengeId(long userId, Challenge challengeId);
+    List<ToDoListEntity> findByUserIdAndChallengeId(long userId, ChallengeEntity challengeId);
 
 }

@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class To_do_list {
+public class ToDoListEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long todoId;
@@ -16,10 +16,10 @@ public class To_do_list {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "challengeId",referencedColumnName ="challengeId")
-    private Challenge challengeId;
+    private ChallengeEntity challengeId;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userId",referencedColumnName ="userId")
-    private User userId;
+    private UserEntity userId;
 
 }

@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Analysis {
+public class AnalysisEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long analysisId;  //혹시 몰라서 생성함
@@ -19,10 +19,10 @@ public class Analysis {
 
     @ManyToOne
     @JoinColumn(name = "mateNickname")
-    private Mate mateNickname;
+    private MateEntity mateNickname;
 
     @ManyToOne
     @JoinColumn(name = "userId")
-    private User userId;
+    private UserEntity userId;
 
 }

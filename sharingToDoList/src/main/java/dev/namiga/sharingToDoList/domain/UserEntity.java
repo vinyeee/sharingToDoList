@@ -1,6 +1,5 @@
 package dev.namiga.sharingToDoList.domain;
 
-import dev.namiga.sharingToDoList.domain.To_do_list;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
@@ -9,7 +8,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class User {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
@@ -21,15 +20,15 @@ public class User {
     private String nickName;
 
     @OneToMany(mappedBy = "userId")
-    private List<Challenge> challenge;
+    private List<ChallengeEntity> challenge;
 
     @OneToMany(mappedBy = "userId")
-    private List<To_do_list> to_do_list;
+    private List<ToDoListEntity> to_do_list;
 
     @OneToMany(mappedBy = "userId")
-    private List<Analysis> analysis;
+    private List<AnalysisEntity> analysis;
 
     @OneToMany(mappedBy = "userId")
-    private List<Mate> mate;
+    private List<MateEntity> mate;
 
 }
