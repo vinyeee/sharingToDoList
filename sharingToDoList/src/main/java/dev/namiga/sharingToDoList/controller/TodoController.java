@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,9 +34,9 @@ public class TodoController {
     @Autowired
     private TodoService todoService;
 
-    @PostMapping("/todopage/{challengeId}")
+    @GetMapping("/todopage/{challengeId}")
     //userId가져오는 방법 찾아야 함.
-    public String getTodoPage(Model model, @PathVariable("challengeID") ChallengeEntity challengeId) {
+    public String getTodoPage(Model model, @PathVariable("challengeId") Long challengeId) {
         UserEntity test = userService.findByUserId(2); //임의 설정
         List<MateEntity> mates = mateService.findMatesByUserId(test);
         List<String> tasks = new ArrayList<>();
@@ -46,12 +47,14 @@ public class TodoController {
         }else {
             for (MateEntity mate : mates) {
                 System.out.println(mate.getMateNickname());
-                UserEntity mateUser = userService.findByNickName(mate.getMateNickname()); //메이트의 사용자 정보 접근
+                String userNick = mate.getMateNickname();
+                UserEntity mateUser = userService.findByNickName(userNick); //메이트의 사용자 정보 접근
                 //challenge ID를 어떻게 전달하지?->maipage에서 넘어올때 challengeId받아오도록 구현 예정
-                List<ToDoListEntity> mateTasks =  todoService.findByUserIdAndChallengeId(mateUser.getUserId(),challengeId);
+                long userId = mateUser.getUserId();
+                List<ToDoListEntity> mateTasks =  todoService.findByUserIdAndChallengeId(userId,challengeId);
                 //현재 챌린지 정보와 메이트 userId를 이용해 to_do_list 받아오기
                 model.addAttribute("todoItems", mateTasks);
-                }
+            }
 
         }
 

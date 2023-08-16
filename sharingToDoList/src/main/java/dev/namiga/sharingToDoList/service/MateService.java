@@ -17,5 +17,8 @@ public class MateService {
         return mateRepository.findMatesByUserId(userId);
     }
 
+    public void saveMate(MateEntity mate) {
+        mateRepository.save(mate);
+    }
 
 }

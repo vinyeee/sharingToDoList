@@ -14,13 +14,13 @@ public class HomeController {
         return "start";
     }
 
-    @GetMapping("/main")
-    public String mainPage() {
-        return "mainpage";
+    @GetMapping("/signup")
+    public String singupPage() {
+        return "signup";
     }
 
-//    @GetMapping("/todopage")   //TodoController에서 작업중
-//    public String todoPage() {
-//        return "todopage";
-//    }
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
 }

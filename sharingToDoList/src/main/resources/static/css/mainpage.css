@@ -6,7 +6,7 @@
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 881px;
+/*  height: 881px;*/
   padding: 31.7px 21.5px;
   width: 438px;
 }
@@ -106,7 +106,6 @@
   flex-direction: column;
   margin-right: 17.41px;
   margin-top: 43px;
-  min-height: 194px;
   width: 355px;
 }
 
@@ -124,12 +123,14 @@
   display: flex;
   margin-top: 17px;
   min-width: 353px;
+  flex-direction: column;
 }
 
 .mainpage .overlap-group {
   height: 66px;
   position: relative;
   width: 353px;
+  margin-bottom: 10px;
 }
 
 .mainpage .rectangle-80 {
@@ -176,7 +177,6 @@
   cursor: pointer;
   height: 78px;
   margin-right: -1.83px;
-  margin-top: 19px;
   width: 347px;
 }
 
@@ -237,11 +237,17 @@
 .mainpage .my-mate {
   align-items: flex-start;
   align-self: center;
+   flex-direction: column;
   display: flex;
   margin-left: 3.0px;
   margin-top: 43px;
   min-width: 339px;
 }
+
+.mainpage .my-mate > * {
+  margin-bottom: 10px; /* Adjust this value as needed */
+}
+
 
 .mainpage .group-container {
   height: 146px;
@@ -249,17 +255,18 @@
   width: 341px;
 }
 
+
 .mainpage .group-64 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 77px;
   left: 1px;
   min-height: 146px;
   position: absolute;
-  top: 0;
+  top: 90px;
   width: 340px;
 }
+
 
 .mainpage .to-do {
   letter-spacing: 0;
@@ -275,6 +282,7 @@
   display: flex;
   height: 46px;
   margin-left: 1px;
+  margin-top: 10px;
   min-width: 337px;
   padding: 7.5px 18.2px;
 }
@@ -325,13 +333,15 @@
   left: 0;
   min-width: 339px;
   position: absolute;
+  margin-bottom: 20px;
   top: 0;
 }
 
-.mainpage .overlap-group-2 {
+.mainpage .searchbox {
+  font-size: 15px;
   align-items: flex-start;
   background-color: var(--textwhite-default);
-  border: 1px solid;
+  border: 0.5px solid;
   border-color: var(--black);
   border-radius: 3px;
   box-shadow: 0px 4px 4px #00000040;
@@ -358,6 +368,16 @@
   background-color: #f1f1f1;
   height: 45px;
   width: 57px;
+  border: 0.5px solid;
+  border-color: var(--black);
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .mainpage .text-38 {
@@ -377,14 +397,16 @@
 }
 
 .mainpage .go-to-analysis {
-  cursor: pointer;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-right: 25.5px;
-  margin-top: 42px;
-  min-height: 23px;
-  white-space: nowrap;
-  width: 341px;
+     letter-spacing: 0;
+      line-height: normal;
+      min-height: 23px;
+      white-space: nowrap;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+
+.mainpage .go-to-analysis:hover {
+  color: blue; /* Change the text color to blue on hover */
 }
 
 .mainpage .flex {
