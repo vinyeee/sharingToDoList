@@ -36,7 +36,7 @@ public class TodoController {
 
     @GetMapping("/todopage/{challengeId}")
     //userId가져오는 방법 찾아야 함.
-    public String getTodoPage(Model model, @PathVariable("challengeId") Long challengeId) {
+    public String getTodoPage(Model model, @PathVariable("challengeId") ChallengeEntity challengeId) {
         UserEntity test = userService.findByUserId(2); //임의 설정
         List<MateEntity> mates = mateService.findMatesByUserId(test);
         List<String> tasks = new ArrayList<>();
@@ -46,12 +46,11 @@ public class TodoController {
             System.out.println(msg);
         }else {
             for (MateEntity mate : mates) {
-                System.out.println(mate.getMateNickname());
                 String userNick = mate.getMateNickname();
                 UserEntity mateUser = userService.findByNickName(userNick); //메이트의 사용자 정보 접근
                 //challenge ID를 어떻게 전달하지?->maipage에서 넘어올때 challengeId받아오도록 구현 예정
-                long userId = mateUser.getUserId();
-                List<ToDoListEntity> mateTasks =  todoService.findByUserIdAndChallengeId(userId,challengeId);
+
+                List<ToDoListEntity> mateTasks =  todoService.findByUserIdAndChallengeId(mateUser,challengeId);
                 //현재 챌린지 정보와 메이트 userId를 이용해 to_do_list 받아오기
                 model.addAttribute("todoItems", mateTasks);
             }
@@ -68,7 +67,9 @@ public class TodoController {
         ToDoListEntity to_do_list = new ToDoListEntity();
         to_do_list.setDetails(todoText);
         to_do_list.setComplete("진행 중"); //클릭하면 db에 반영되는 controller mapping 따로 필요
-        return ResponseEntity.ok("Todo added successfully");
+        //challengeId와 user_id 전달이 안되는 중
+        todoService.saveMate(to_do_list);
+        return ResponseEntity.ok("{\"message\": \"Todo added successfully\"}");
     }
     //클릭하면 db에 "완료"로 반영하는 controller 개별로 필요함
 }

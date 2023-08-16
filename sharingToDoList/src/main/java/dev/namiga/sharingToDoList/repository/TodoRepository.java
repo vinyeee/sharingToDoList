@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TodoRepository extends JpaRepository<ToDoListEntity,Long> {
+public interface TodoRepository extends JpaRepository<ToDoListEntity, Long> {
 
-    List<ToDoListEntity> findByUserIdAndChallengeId(long userId, long challengeId);
+    List<ToDoListEntity> findByUserIdAndChallengeId(UserEntity userId, ChallengeEntity challengeId);
 
 }
