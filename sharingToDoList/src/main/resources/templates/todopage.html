@@ -21,8 +21,8 @@
     ><img class="vector-1" src="/img/vector-2.svg" alt="Vector" />
     </a>
     <div class="frame-41">
-      <div class="text-64 valign-text-middle">“비상금 모으기 대작전”</div>
-      <div class="text-63 valign-text-middle">🌟상금 : 10,000</div>
+      <div class="text-64 valign-text-middle" th:text="${challengeName}">"</div>
+      <div class="text-63 valign-text-middle">🌟상금: <span th:text="${challengePrize}"></span></div>
       <p class="text-65">06 : 36 : 59</p>
     </div>
     <div class="group-80">
@@ -57,41 +57,16 @@
     <div class="group-81">
       <div class="group-container-1">
         <img class="group-2" src="/img/group-2@2x.png" alt="Group" />
-        <div class="overlap-group4-1"><div class="text-73 valign-text-middle">슈퍼맨</div></div>
+        <div class="overlap-group4-1"><div class="text-73 valign-text-middle" th:text="${mymateNick}"></div></div>
       </div>
-      <ul>
-        <li th:each="task : ${todoItems}"> <!--이 챌린지를 함께하는 메이트의 to_do_list 나열 -->
-          <span th:class="${task.complete == '완료'} ? 'completed-task' : 'incomplete-task'" th:text="${task.details}"></span>
-        </li>
-      </ul>
-      <!--삭제 예정 -->
-      <!--          <div class="overlap-group2-1">-->
-      <!--            <img class="vector" src="/img/vector-2-1.svg" alt="Vector 2" />-->
-      <!--            <div class="group">-->
-      <!--              <img class="ellipse-2-1" src="/img/ellipse-2-1.svg" alt="Ellipse 2" />-->
-      <!--              <div class="text-container">-->
-      <!--                <div class="text valign-text-middle">빨래 돌리기</div>-->
-      <!--                <div class="text-1 valign-text-middle notosanskr-normal-black-16px">👋</div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--          <div class="group-74">-->
-      <!--            <div class="ellipse-3-1"></div>-->
-      <!--            <div class="text-76 valign-text-middle notosanskr-normal-black-16px">아침식사 설거지</div>-->
-      <!--          </div>-->
-      <!--          <div class="group-75">-->
-      <!--            <div class="ellipse-4"></div>-->
-      <!--            <div class="text-2 valign-text-middle notosanskr-normal-black-16px">양말 개기</div>-->
-      <!--          </div>-->
-      <!--          <div class="overlap-group3-1">-->
-      <!--            <div class="ellipse-2-2"></div>-->
-      <!--            <div class="text-container-1">-->
-      <!--              <div class="text-7 valign-text-middle">+</div>-->
-      <!--              <div class="text-7-1 valign-text-middle notosanskr-normal-shady-lady-16px">할 일을 추가해보세요</div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--          <img class="rectangle-73 rectangle" src="/img/rectangle-70@2x.png" alt="Rectangle 73" />-->
+
     </div>
+    <ul class="listLb">
+      <li th:each="task : ${todoItems}"> <!--이 챌린지를 함께하는 메이트의 to_do_list 나열 -->
+        <input type="checkbox" class="listCheck" th:checked="${task.complete == '완료'}" disabled>
+        <span th:class="${task.complete == '완료'} ? 'completed-task' : 'incomplete-task'" th:text="${task.details}"></span>
+      </li>
+    </ul>
   </div>
 </div>
 </body>

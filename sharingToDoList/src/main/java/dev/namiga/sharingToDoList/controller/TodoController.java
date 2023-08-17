@@ -38,6 +38,8 @@ public class TodoController {
     //userId가져오는 방법 찾아야 함.
     public String getTodoPage(Model model, @PathVariable("challengeId") ChallengeEntity challengeId) {
         UserEntity test = userService.findByUserId(2); //임의 설정
+        String challengeName = challengeId.getQuest();
+        Integer challengePrize = challengeId.getPrize();
         List<MateEntity> mates = mateService.findMatesByUserId(test);
         List<String> tasks = new ArrayList<>();
 
@@ -46,23 +48,26 @@ public class TodoController {
             System.out.println(msg);
         }else {
             for (MateEntity mate : mates) {
-                String userNick = mate.getMateNickname();
-                UserEntity mateUser = userService.findByNickName(userNick); //메이트의 사용자 정보 접근
-                //challenge ID를 어떻게 전달하지?->maipage에서 넘어올때 challengeId받아오도록 구현 예정
+                String mateNick = mate.getMateNickname();
+                UserEntity mateUser = userService.findByNickName(mateNick); //메이트의 사용자 정보 접근
 
                 List<ToDoListEntity> mateTasks =  todoService.findByUserIdAndChallengeId(mateUser,challengeId);
                 //현재 챌린지 정보와 메이트 userId를 이용해 to_do_list 받아오기
+                model.addAttribute("mymateNick",mateNick);
                 model.addAttribute("todoItems", mateTasks);
             }
 
         }
+
+        model.addAttribute("challengeName",challengeName);
+        model.addAttribute("challengePrize",challengePrize);
 
         return "todopage";
     }
 
     @PostMapping("/add-todo")
     public ResponseEntity<String> addTodo(@RequestBody String todoText) {
-        // 이용자의 userId, challengeId를 어떻게 전달하지?
+        // 이용자의 userId, challengeId를 어떻게 전달하지? <-----해결 필요
         // text todo_id, complete, details, challenge_id, user_id
         ToDoListEntity to_do_list = new ToDoListEntity();
         to_do_list.setDetails(todoText);

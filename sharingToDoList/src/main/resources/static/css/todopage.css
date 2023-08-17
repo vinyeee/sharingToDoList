@@ -61,6 +61,8 @@
   margin-top: 8px;
   text-align: center;
   width: 166px;
+  display: flex;
+  align-items: center;
 }
 
 .todopage .text-65 {
@@ -329,10 +331,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-right: -83.95px;
   margin-top: 50px;
-  min-height: 205px;
-  width: 448px;
 }
 
 .todopage .group-container-1 {
@@ -341,6 +340,7 @@
   display: flex;
   gap: 30px;
   margin-left: -1.0px;
+  margin-bottom: 30px;
   min-width: 294px;
 }
 
@@ -586,9 +586,15 @@ input[type="checkbox"]:checked {
 }
 
 .listLb {
+    list-style:none;
     width: 90%;
     display: inline-block;
     cursor: pointer;
+}
+
+.listLb li {
+    margin-bottom: 10px;
+    margin-left: 3.47px;
 }
 
 .delBtn {
