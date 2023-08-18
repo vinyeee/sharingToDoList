@@ -22,4 +22,8 @@ public class TodoService {
     public void saveMate(ToDoListEntity to_do_list) {
         todoRepository.save(to_do_list);
     }
+
+    public ToDoListEntity findByChallengeIdAndUserIdAndDetails(ChallengeEntity challengeId, UserEntity userId, String details) {
+        return todoRepository.findByChallengeIdAndUserIdAndDetails(challengeId,userId,details);
+    }
 }

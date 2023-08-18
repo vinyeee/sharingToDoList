@@ -331,7 +331,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 100px;
+  min-width: 330px;
 }
 
 .todopage .group-container-1 {
@@ -354,6 +355,16 @@
 .todopage .overlap-group4-1 {
   align-items: flex-start;
   background-color: #ec9595;
+  border-radius: 3px;
+  display: flex;
+  height: 30px;
+  min-width: 233px;
+  padding: 5.3px 75.7px;
+}
+
+.todopage .overlap-group4-2 {
+  align-items: flex-start;
+  background-color: #ADD8E6;
   border-radius: 3px;
   display: flex;
   height: 30px;
@@ -529,6 +540,7 @@ header .header-icon {
     padding-bottom: 5px;
     border: none;
     border-bottom: 1px solid rgb(163, 155, 155);
+    margin-bottom: 10px;
     outline: none;
     font-size: 14px;
     background-color: transparent;
@@ -684,8 +696,6 @@ input[type="checkbox"]:checked {
 /* mate 의 to_do_list 표시를 위한 항목*/
  .completed-task {
             text-decoration: line-through;
-            color: green;
         }
 
-        .incomplete-task {
-            color: red;
+        .incomplete-task {}

@@ -13,4 +13,5 @@ public interface TodoRepository extends JpaRepository<ToDoListEntity, Long> {
 
     List<ToDoListEntity> findByUserIdAndChallengeId(UserEntity userId, ChallengeEntity challengeId);
 
+    ToDoListEntity findByChallengeIdAndUserIdAndDetails(ChallengeEntity challengeId, UserEntity userId, String details);
 }

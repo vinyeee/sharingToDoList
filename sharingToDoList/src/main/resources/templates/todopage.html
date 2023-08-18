@@ -27,11 +27,12 @@
     </div>
     <div class="group-80">
       <!--         to- do list code -->
-      <div class="searchBox">
+      <div class="group-container-1">
         <img class="group-2" src="/img/group-2@2x.png" alt="Group" />
-        <input type="button" class="searchBtn btn-all" value="전체 : 0">
-        <input type="button" class="searchBtn btn-before" value="진행중 : 0">
-        <input type="button" class="searchBtn btn-after" value="완료 : 0">
+        <div class="overlap-group4-2"><div class="text-73 valign-text-middle" th:text="${userNick}"></div></div>
+<!--        <input type="button" class="searchBtn btn-all" value="전체 : 0">-->
+<!--        <input type="button" class="searchBtn btn-before" value="진행중 : 0">-->
+<!--        <input type="button" class="searchBtn btn-after" value="완료 : 0">-->
       </div>
 
       <!-- Todo-List -->
@@ -41,6 +42,14 @@
           <div class="addBox_inner">
             <input type="text" class="addTxt" placeholder="To-do list 작성">
             <input type="button" class="addBtn" value="+">
+          </div>
+          <div class="currentUser">
+          <ul class="listLb">
+            <li th:each="todo : ${userTodos}"> <!--이 챌린지를 함께하는 메이트의 to_do_list 나열 -->
+              <input type="checkbox" class="listCheck" th:checked="${todo.complete == '완료'}">
+              <span th:class="${todo.complete == '완료'} ? 'completed-task' : 'incomplete-task'" th:text="${todo.details}"></span>
+            </li>
+          </ul>
           </div>
         </div>
 
@@ -109,6 +118,10 @@ addBtn.addEventListener('click', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  checkList();
+  });
+
 // addTxt 입력창 null값 판단
 function addList() {
     if (addTxt.value !== "") {
@@ -117,6 +130,14 @@ function addList() {
         list.setAttribute("class", "list");
         list.innerHTML = `<label class="listLb"><input type="checkbox" class="listCheck">${addTxt.value}</label><button class="delBtn">x</button>`;
 
+        //url에서 challengeId 가져오기
+         function getChallengeIdFromUrl() {
+            var pathArray = window.location.pathname.split('/');
+            return pathArray[pathArray.length - 1]; // Get the last segment of the path
+        }
+
+        var userNick = /*[[${userNick}]]*/ '';
+        var challengeId = parseInt(getChallengeIdFromUrl(), 10);
 
         // 작성한 내용 controller의 add-todo에 전송
         fetch('/add-todo', {
@@ -124,7 +145,11 @@ function addList() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: addTxt.value // Send the value of addTxt
+            body: JSON.stringify({
+                userNick: userNick,
+                challengeId: challengeId,
+                todoText: addTxt.value
+            })
         })
         .then(response => response.json())
         .then(data => {
@@ -168,20 +193,57 @@ function addList() {
 
 // 리스트 체크(완료처리)
 function checkList() {
+    const listCheck = document.querySelectorAll('.listCheck');
+    const listLb = document.querySelectorAll('.listLb');
+    const currentUser = document.querySelector('.currentUser');
+    const incompleteTasks = currentUser.querySelectorAll('.incomplete-task');
 
-    listCheck = document.querySelectorAll('.listCheck')
-    let listLb = document.querySelectorAll('.listLb')
+    listCheck.forEach((listEl, index) => {
+        listEl.addEventListener('click', function () {
+            console.log('Clicked:', listEl.checked);
+            const checked = listEl.checked;
+            const listItem = listEl.closest('li');
+            const details = incompleteTasks[index].textContent;
 
-    listCheck.forEach((listEl, index) => listEl.addEventListener('click', function(){
+            if (listEl.checked) {
+                 listLb[index].style.textDecoration = "line-through";
+                 updateCompleteStatus(details, true);
+             } else {
+                  listLb[index].style.textDecoration = "none";
+                  updateCompleteStatus(details, false);
+              }
 
-        if(listEl.checked == true) {
-            listLb[index].style.textDecoration = "line-through"
-        } else {
-            listLb[index].style.textDecoration = "none"
+                listCount();
+        });
+    });
+}
+
+
+async function updateCompleteStatus(details, checked) {
+    function getChallengeIdFromUrl() {
+            var pathArray = window.location.pathname.split('/');
+            return pathArray[pathArray.length - 1];
         }
 
-        listCount();
-    }))
+    const challengeId = getChallengeIdFromUrl();
+
+    try {
+        const response = await fetch(`/update-complete/${challengeId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                details: details,
+                checked: checked
+            })
+        });
+
+        const data = await response.json();
+        console.log(data); // Response from the backend
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 
