@@ -392,3 +392,19 @@
   text-align: center;
   width: 249px;
 }
+
+ .challengeWinStatus {
+        border-collapse: collapse;
+        width: 343px;
+        margin: 20px;
+    }
+
+    .challengeWinStatus th, .challengeWinStatus td {
+        padding: 7px;
+        text-align: center;
+    }
+
+    /* Thick dotted line for rows */
+    .challengeWinStatus tr {
+        border-bottom: 2px dotted #aaa;
+    }

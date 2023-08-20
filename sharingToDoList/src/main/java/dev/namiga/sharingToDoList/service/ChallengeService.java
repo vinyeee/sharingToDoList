@@ -6,6 +6,8 @@ import dev.namiga.sharingToDoList.repository.ChallengeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 public class ChallengeService {
 
@@ -20,4 +22,7 @@ public class ChallengeService {
         return challengeRepository.findByChallengeId(challengeId);
     }
 
+    public ChallengeEntity findPrizeByChallengeId(Long challengeId) {
+        return challengeRepository.findPrizeByChallengeId(challengeId);
+    }
 }

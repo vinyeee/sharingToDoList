@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
     <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
     <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
@@ -21,37 +22,71 @@
         </a>
         <div class="group-46">
           <div class="overlap-group4">
-            <div class="text-52 valign-text-middle">챌린지 성과 요약</div>
-            <div class="overlap-group-container">
-              <div class="overlap-group2">
-                <img class="image-3 image" src="img/image-3@2x.png" alt="image 3" />
-                <div class="rectangle-80 rectangle"></div>
-                <div class="group-24"></div>
-                <div class="ellipse-13"></div>
-                <div class="group-25"></div>
-                <div class="group-26"></div>
-                <img class="vector-2" src="img/vector-2-2.svg" alt="Vector 2" />
-              </div>
-              <div class="overlap-group3">
-                <img class="image-2 image" src="img/image-2@2x.png" alt="image 2" />
-                <div class="rectangle-81 rectangle"></div>
-                <div class="group-32">
-                  <div class="overlap-group">
-                    <div class="group-2"></div>
-                  </div>
-                  <div class="overlap-group1">
-                    <div class="group-2"></div>
-                  </div>
-                </div>
-                <img class="vector-3" src="img/vector-3-1.svg" alt="Vector 3" />
-              </div>
-            </div>
-            <p class="vs valign-text-middle vs-2 notosanskr-normal-black-16px">
-              🎉예빈맘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              vs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;슈퍼맨
-            </p>
+            <h1>챌린지 성과 분석😎</h1>
+            <canvas id="barChart" width="400" height="200"></canvas>
+
+<!--            <div class="text-52 valign-text-middle">챌린지 성과 요약</div>-->
+<!--            <div class="overlap-group-container">-->
+<!--              <div class="overlap-group2">-->
+<!--                <img class="image-3 image" src="img/image-3@2x.png" alt="image 3" />-->
+<!--                <div class="rectangle-80 rectangle"></div>-->
+<!--                <div class="group-24"></div>-->
+<!--                <div class="ellipse-13"></div>-->
+<!--                <div class="group-25"></div>-->
+<!--                <div class="group-26"></div>-->
+<!--                <img class="vector-2" src="img/vector-2-2.svg" alt="Vector 2" />-->
+<!--              </div>-->
+<!--              <div class="overlap-group3">-->
+<!--                <img class="image-2 image" src="img/image-2@2x.png" alt="image 2" />-->
+<!--                <div class="rectangle-81 rectangle"></div>-->
+<!--                <div class="group-32">-->
+<!--                  <div class="overlap-group">-->
+<!--                    <div class="group-2"></div>-->
+<!--                  </div>-->
+<!--                  <div class="overlap-group1">-->
+<!--                    <div class="group-2"></div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <img class="vector-3" src="img/vector-3-1.svg" alt="Vector 3" />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <p class="vs valign-text-middle vs-2 notosanskr-normal-black-16px">-->
+<!--              🎉예빈맘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--              vs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;슈퍼맨-->
+<!--            </p>-->
           </div>
         </div>
+        <table border="1" class ="challengeWinStatus">
+          <thead>
+          <tr>
+            <th>챌린지명</th>
+            <th>우승자</th>
+            <th>상금🏆</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="entry : ${winners}">
+            <td th:text="${entry.key}"></td>
+            <td th:text="${entry.value}"></td>
+            <td th:text="${challengePrize[entry.key]}"></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table border="1" class ="challengeWinStatus">
+          <thead>
+          <tr>
+            <th>메이트</th>
+            <th>상금</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="winTotal : ${WinTotalPrize}">
+            <td th:text="${winTotal.key}"></td>
+            <td th:text="${winTotal.value}"></td>
+          </tr>
+          </tbody>
+        </table>
         <div class="group-23">
           <div class="flex-col">
             <div class="overlap-group2-1 notosanskr-normal-black-16px">

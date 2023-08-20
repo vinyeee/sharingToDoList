@@ -15,6 +15,9 @@ public class TodoService {
     @Autowired
     private TodoRepository todoRepository;
 
+    @Autowired
+    private TodoRepository toDoRepository;
+
     public List<ToDoListEntity> findByUserIdAndChallengeId(UserEntity userId, ChallengeEntity challengeId){
         return todoRepository.findByUserIdAndChallengeId(userId, challengeId);
     }
@@ -25,5 +28,15 @@ public class TodoService {
 
     public ToDoListEntity findByChallengeIdAndUserIdAndDetails(ChallengeEntity challengeId, UserEntity userId, String details) {
         return todoRepository.findByChallengeIdAndUserIdAndDetails(challengeId,userId,details);
+    }
+
+    public int getCompletedCountByChallengeIdAndUserId(ChallengeEntity challengeId, UserEntity userId) {
+        List<ToDoListEntity> toDoList = toDoRepository.findByChallengeIdAndUserId(challengeId, userId);
+
+        int completedCount = (int) toDoList.stream()
+                .filter(entry -> entry.getComplete().equals("완료"))
+                .count();
+
+        return completedCount;
     }
 }
